@@ -1,0 +1,99 @@
+body{
+    border:0;
+    padding:0;
+    background-image: url("img/EnemyBg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: black;
+}
+
+div.top-menu{
+    text-align: center;
+    background-color: white;
+}
+
+div.main-body{
+    position: relative;
+    left: 0;
+    height: 60vh;
+}
+div.player-section{
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 30px;
+    left: 10%;
+    top: 0;
+    text-align: right;
+}
+
+#opponent-section{
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 30px;
+    right: 10%;
+    top: 0;
+    text-align: right;
+}
+div.bottom-menu{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+}
+
+div.adventure-message{
+    position: absolute;
+    text-align: left;
+    width: 50%;
+    left: 25%;
+    background-color: white;
+}
+
+#shop-window{
+    z-index: 2;
+    position: absolute;
+    background-color: rgba(63, 15, 0, 0.7);
+    text-align: center;
+    color: white;
+    text-shadow: black;
+    font-family: Arial, Helvetica, sans-serif;
+    display: none;
+    top: 25%;
+    bottom: 20%;
+    left:30%;
+    right: 30%;
+}
+
+#start-combat{
+    position: absolute;
+    margin: auto;
+    width: 20%;
+    left: 40%;
+    top: 30%;
+}
+
+#next-stage{
+    position: absolute;
+    margin: auto;
+    width: 20%;
+    left: 40%;
+    top: 30%;
+    display: none;
+}
+
+#npc-avatar{
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+    width: 150px;
+    text-align: left;
+}
+
+#player-avatar{
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    width: 150px;
+    text-align: left;
+}

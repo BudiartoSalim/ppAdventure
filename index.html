@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PP Adventure!</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="top-menu">
+            <h1>PP Adventure!</h1>
+            <h3>Current Stage: <span id="current-stage"></span></h3>
+        </div>
+        <div class="main-body">
+            <div class="player-section">
+                <h2 id="player-name"></h2>
+                <h3>Player HP: <span id="player-hp"></span></h3>
+                <h3>Player ATK: <span id="player-atk"></span></h3>
+                <h3>Player Money: <span id="player-money"></span>g</h3>
+                <img id="carry-potion" src="img/Potion.png"></img>
+            </div>
+            <br><img id="player-avatar" src="img/PlayerChara.png" alt="your avatar">
+            <div id="opponent-section">
+                <h2 id="enemy-name"></h2>
+                <h3>Enemy HP: <span id="enemy-hp"></span></h3>
+                <h3>Enemy ATK: <span id="enemy-atk"></span></h3>
+                <h3>Enemy Money: <span id="enemy-money"></span></h3>
+            </div>
+            <br><img id="npc-avatar" src="img/NormalEnemy.png" alt="npc avatar">
+            <div id="shop-window">
+                <h3>Shop</h3>
+                <h4 id="shop-message"></h4>
+                <button id="buy-potion" onclick="buyPotion()"></button>
+                <button id="buy-weapon" onclick="buyWeapon()"></button>
+                <button id="buy-armor" onclick="buyArmor()"></button>
+                <button id="buy-heal" onclick="buyHeal()"></button>
+                <button id="stop-shop" onclick="stopShopping()">Stop Shopping</button>
+            </div>
+            <div id="game-over-screen">
+                <h4 id="game-over-message"></h4>
+            </div>
+            <div class="bottom-menu">
+                <button id="start-combat" onclick="startCombat()">Start Combat</button> <br><br>
+                <button id="next-stage" onclick="rollStage()">Next Stage!</button><br><br><br><br>
+                <button id="new-game" onclick="initializeNewGame()">START NEW GAME!</button>
+                <div class="adventure-message">
+                    <p id="log-master">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script src="script.js"></script>
+</html>
