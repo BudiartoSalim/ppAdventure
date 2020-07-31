@@ -141,6 +141,8 @@ function startCombat(){
                 if (currentRecord < stageCounter){
                     currentRecord = stageCounter;
                 }
+                combatButton.style.display = "none";
+                nextStageButton.style.display = "none";
                 document.getElementById("player-avatar").src = `img/PlayerDed.png`;
                 updateAdventureLog(`=========================`);
                 updateAdventureLog(`Your current best is ${currentRecord} stages!`);
@@ -149,7 +151,9 @@ function startCombat(){
         }
         printToScreen();
     }
-    nextStage();
+    if (player.currentHealth > 0){
+        nextStage();
+    }
 } // COMBAT FUNCTION IS HERE
 // EXPAND TO SEE
 
@@ -272,7 +276,7 @@ function printShopContentUpdate(){
 
 function printToScreen(){
     document.getElementById('player-name').innerText = player.name;
-    document.getElementById('player-hp').innerText = player.currentHealth;
+    document.getElementById('player-hp').innerText = `${player.currentHealth}/${player.maxHealth}`;
     document.getElementById('player-atk').innerText = player.attack;
     document.getElementById('player-money').innerText = player.money;
     document.getElementById('enemy-name').innerText = normalEnemy.name;
